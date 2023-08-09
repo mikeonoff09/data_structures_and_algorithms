@@ -42,11 +42,12 @@ class Stack<E> {
     return Stack.of(_storage.reversed);
   }
 
-  /// this executes a function for each element in the stack
+  /// Executes a function for each element in the stack
   void forEach(void Function(E element) callback) {
     _storage.forEach(callback);
   }
 
+  /// Returns `true` if the stack is parenthesis balanced using pure dart.
   bool isBalanced() {
     int open = 0;
     int close = 0;
@@ -64,6 +65,8 @@ class Stack<E> {
     }
   }
 
+  /// Returns `true` if the stack is parenthesis balanced using the forEach 
+  /// implemented function.
   bool isBalanced2() {
     int balance = 0;
 
